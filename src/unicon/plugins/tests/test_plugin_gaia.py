@@ -1,3 +1,10 @@
+"""
+Unittests for Gaia plugin
+
+"""
+
+__author__ = "Sam Johnson <samuel.johnson@gmail.com>"
+
 import os
 import yaml
 import unittest
@@ -24,50 +31,9 @@ class TestGaiaPlugin(unittest.TestCase):
         #cls.c.connection_timeout = 1
         cls.c.connect()
 
-    def test_show_version_all(self):
+    def test_execute(self):
         r = self.c.execute('show version all')
-        r = self.c.command('show version all')
-        print(r)
-
-#
-    #def test_connect_ssh(self):
-    #    c = Connection(hostname='gaia-gw',
-    #                    start=['mock_device_cli --os gaia --state connect_ssh'],
-    #                    os='gaia',
-    #                    credentials=dict(default=dict(
-    #                                username='gaia-user', password='gaia-password')))
-    #    c.connection_timeout = 1
-    #    c.connect()
-    #    self.assertIn('gaia-gw>', c.spawn.match.match_output)
-    #    c.disconnect()
-#
-    #def test_login_connect_connectReply(self):
-    #    c = Connection(hostname='gaia-gw',
-    #                    start=['mock_device_cli --os gaia --state clish'],
-    #                    os='gaia',
-    #                    credentials=dict(default=dict(
-    #                                username='gaia-user', password='gaia-password')),
-    #                    connect_reply = Dialog([[r'^(.*?)Password:']]))
-    #    c.connection_timeout = 1
-    #    c.connect()
-    #    self.assertIn("^(.*?)Password:", str(c.connection_provider.get_connection_dialog()))
-    #    c.disconnect()
-
-#class TestGaiaPluginExecute(unittest.TestCase):
-#
-#    def test_execute_show_feature(self):
-#        c = Connection(hostname='gaia-gw',
-#                        start=['mock_device_cli --os gaia --state shell'],
-#                        os='gaia',
-#                        credentials=dict(default=dict(
-#                                    username='gaia-user', password='gaia-password')))
-#        c.connection_timeout = 1
-#        c.connect()
-#        cmd = 'show version all'
-#        expected_response = mock_data['shell']['commands'][cmd].strip()
-#        ret = c.execute(cmd).replace('\r', '')
-#        self.assertIn(expected_response, ret)
-#        c.disconnect()
+        self.assertIn("Product version",r)
 
 if __name__ == "__main__":
     unittest.main()

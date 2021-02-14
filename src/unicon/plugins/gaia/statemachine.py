@@ -1,3 +1,12 @@
+'''
+Author: Sam Johnson
+Contact: samuel.johnson@gmail.com
+https://twitter.com/TestingBytes
+
+Contents largely inspired by sample Unicon repo:
+https://github.com/CiscoDevNet/pyats-plugin-examples/tree/master/unicon_plugin_example/src/unicon_plugin_example
+'''
+
 from unicon.statemachine import Path, State, StateMachine
 from .patterns import GaiaPatterns
 
@@ -13,9 +22,6 @@ class GaiaStateMachine(StateMachine):
         statemachine class's create() method is its entrypoint. This showcases
         how to setup a statemachine in Unicon. 
         '''
-        #super().create()
 
         clish = State("enable", g.clish_prompt)
-        #enabled = State("enable", g.clish_prompt)
         self.add_state(clish)
-        #self.add_state(enabled)
