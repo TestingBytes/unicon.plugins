@@ -21,7 +21,6 @@ class GaiaSettings(GenericSettings):
         self.ESCAPE_CHAR_CALLBACK_PRE_SENDLINE_PAUSE_SEC = 1
         self.HA_INIT_EXEC_COMMANDS = [
             'set clienv rows 0',
-            'show version all'
             ]
         self.HA_INIT_CONFIG_COMMANDS = []
         
