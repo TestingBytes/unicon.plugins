@@ -1,7 +1,7 @@
 '''
 Author: Sam Johnson
 Contact: samuel.johnson@gmail.com
-https://twitter.com/TestingBytes
+https://github.com/TestingBytes
 
 Contents largely inspired by sample Unicon repo:
 https://github.com/CiscoDevNet/pyats-plugin-examples/tree/master/unicon_plugin_example/src/unicon_plugin_example
