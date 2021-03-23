@@ -6,8 +6,6 @@ https://github.com/CiscoDevNet/pyats-plugin-examples/tree/master/unicon_plugin_e
 from unicon.eal.dialogs import Statement
 from unicon.plugins.generic.statements import GenericStatements
 from .patterns import GaiaPatterns 
-from unicon.utils import to_plaintext
-from unicon.core.errors import UniconAuthenticationError
 
 statements = GenericStatements()
 patterns = GaiaPatterns()

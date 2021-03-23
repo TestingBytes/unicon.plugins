@@ -1,9 +1,13 @@
-"""
-Unittests for Gaia plugin
+'''
+Tests for Unicon Gaia Plugin
 
-"""
+Author: Sam Johnson
+Contact: samuel.johnson@gmail.com
+https://github.com/TestingBytes
 
-__author__ = "Sam Johnson <samuel.johnson@gmail.com>"
+Contents largely inspired by sample Unicon repo:
+https://github.com/CiscoDevNet/pyats-plugin-examples/tree/master/unicon_plugin_example/src/unicon_plugin_example
+'''
 
 import os
 import yaml
@@ -12,7 +16,6 @@ from unittest.mock import patch
 
 import unicon
 from unicon import Connection
-from unicon.eal.dialogs import Dialog
 from unicon.mock.mock_device import mockdata_path
 
 with open(os.path.join(mockdata_path, 'gaia/gaia_mock_data.yaml'), 'rb') as datafile:
@@ -28,7 +31,7 @@ class TestGaiaPlugin(unittest.TestCase):
                         os='gaia',
                         credentials={'default': {'username':'gaia-user', 'password':'gaia-password'}}
                         )
-        #cls.c.connection_timeout = 1
+
         cls.c.connect()
 
     def test_execute(self):
