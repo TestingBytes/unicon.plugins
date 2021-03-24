@@ -6,11 +6,6 @@ from unicon.bases.routers.services import BaseService
 from unicon.eal.dialogs import Dialog, Statement
 from unicon.logs import UniconStreamHandler
 
-from unicon.plugins.generic.service_implementation import Execute as GenericExecute
-from unicon.plugins.generic.statements import GenericStatements
-from unicon.plugins.generic import GenericUtils
-from unicon.plugins.utils import slugify
-
 class Command(BaseService):
     """ Service to execute a single command on the ConfD CLI.
     This service is used by the Configure and Execute services

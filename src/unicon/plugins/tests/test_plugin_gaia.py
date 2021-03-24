@@ -35,8 +35,11 @@ class TestGaiaPlugin(unittest.TestCase):
         cls.c.connect()
 
     def test_execute(self):
-        r = self.c.execute('show version all')
-        self.assertIn("Product version",r)
+        response = self.c.execute('show version all')
+        self.assertIn("Product version", response)
+
+        # check hostname
+        self.assertIn("gaia-gw", self.c.hostname)
 
 if __name__ == "__main__":
     unittest.main()
