@@ -10,7 +10,7 @@ https://github.com/CiscoDevNet/pyats-plugin-examples/tree/master/unicon_plugin_e
 from unicon.statemachine import Path, State, StateMachine
 from .patterns import GaiaPatterns
 
-g = GaiaPatterns()
+patterns = GaiaPatterns()
 
 class GaiaStateMachine(StateMachine):
 
@@ -23,5 +23,5 @@ class GaiaStateMachine(StateMachine):
         how to setup a statemachine in Unicon. 
         '''
 
-        clish = State("enable", g.clish_prompt)
+        clish = State("enable", patterns.clish_prompt)
         self.add_state(clish)

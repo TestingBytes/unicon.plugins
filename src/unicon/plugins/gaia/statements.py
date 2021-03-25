@@ -20,10 +20,6 @@ def password_handler(spawn, context, session):
     else:
         spawn.sendline(context['password'])
 
-
-def confirm_imaginary_handler(spawn):
-    spawn.sendline('i concur')
-
 # define the list of statements particular to this platform
 login_stmt = Statement(pattern=patterns.login_prompt,
                        action=login_handler,

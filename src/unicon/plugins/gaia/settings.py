@@ -8,9 +8,7 @@ https://github.com/CiscoDevNet/pyats-plugin-examples/tree/master/unicon_plugin_e
 '''
 
 from unicon.plugins.generic.settings import GenericSettings
-from .patterns import GaiaPatterns
 
-g = GaiaPatterns()
 
 class GaiaSettings(GenericSettings):
 
@@ -19,9 +17,5 @@ class GaiaSettings(GenericSettings):
         super().__init__()
         self.CONNECTION_TIMEOUT = 60*5
         self.ESCAPE_CHAR_CALLBACK_PRE_SENDLINE_PAUSE_SEC = 1
-        self.HA_INIT_EXEC_COMMANDS = [
-            'set clienv rows 0',
-            ]
+        self.HA_INIT_EXEC_COMMANDS = ['set clienv rows 0']
         self.HA_INIT_CONFIG_COMMANDS = []
-        
-        self.CLISH_PROMPT = g.clish_prompt
