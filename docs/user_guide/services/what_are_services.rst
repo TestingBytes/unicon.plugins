@@ -2,7 +2,7 @@ What Are Services
 =================
 
 Services are API's to perform general administrative tasks on the devices in a
-platform agnostic manner. We also use the word `subcommands` interchangably to
+platform agnostic manner. We also use the word `subcommands` interchangeably to
 refer to services. Both mean the same.
 
 These APIs or their usage do not change from platform to platform and provide
