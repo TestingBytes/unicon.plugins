@@ -25,3 +25,6 @@ class GaiaStateMachine(StateMachine):
 
         clish = State("enable", patterns.clish_prompt)
         self.add_state(clish)
+
+        # TODO Implement Expert / Clish states. 
+        # Current implementation treats "clish" as state "enable" and expert is not supported.

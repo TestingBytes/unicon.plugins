@@ -27,7 +27,7 @@ class TestGaiaPlugin(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.c = Connection(hostname='gaia-gw',
-                        start=['/pyats/bin/mock_device_cli --os gaia --state login'],
+                        start=['mock_device_cli --os gaia --state login'],
                         os='gaia',
                         credentials={'default': {'username':'gaia-user', 'password':'gaia-password'}}
                         )
@@ -40,6 +40,8 @@ class TestGaiaPlugin(unittest.TestCase):
 
         # check hostname
         self.assertIn("gaia-gw", self.c.hostname)
+
+        self.c.disconnect()
 
 if __name__ == "__main__":
     unittest.main()
